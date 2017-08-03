@@ -5,7 +5,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var tab_view_common_1 = require("./tab-view-common");
 var text_base_1 = require("../text-base");
 var image_source_1 = require("../../image-source");
-var profiling_1 = require("../../profiling");
 __export(require("./tab-view-common"));
 var UITabBarControllerImpl = (function (_super) {
     __extends(UITabBarControllerImpl, _super);
@@ -113,11 +112,12 @@ var TabViewItem = (function (_super) {
     }
     TabViewItem.prototype.setViewController = function (controller) {
         this._iosViewController = controller;
-        this.setNativeView(this._nativeView = controller.view);
+        this._nativeView = this.nativeView = controller.view;
+        tab_view_common_1.initNativeView(this);
     };
     TabViewItem.prototype.disposeNativeView = function () {
         this._iosViewController = undefined;
-        this.setNativeView(undefined);
+        this.nativeView = undefined;
     };
     TabViewItem.prototype._update = function () {
         var parent = this.parent;
@@ -378,9 +378,6 @@ var TabView = (function (_super) {
     };
     return TabView;
 }(tab_view_common_1.TabViewBase));
-__decorate([
-    profiling_1.profile
-], TabView.prototype, "onLoaded", null);
 exports.TabView = TabView;
 function getTitleAttributesForStates(tabView) {
     var result = {};

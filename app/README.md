@@ -1,25 +1,36 @@
-# NativeScript Angular Template
+# Nativescript-Angular-Drawer-Template
+A starter template to quickly create nativescript angular projects with drawer pages.
 
-This template creates a "Hello, world" NativeScript app using TypeScript and Angular.
+## Usage
+`tns create my-project-name --template nativescript-angular-drawer-template`
 
-You can create a new app that uses this template with either the `--template` option.
+## Preview
+### Android
+![android-preview](http://ngxp.io/wp-content/product-previews/nativescript-angular-drawer-template/ns-ng-drawer-template-android.gif)
 
-```
-tns create my-app-name --template tns-template-hello-world-ng
-```
+### iOS
+![ios-preview](http://ngxp.io/wp-content/product-previews/nativescript-angular-drawer-template/ns-ng-drawer-template-ios.gif)
 
-Or the `--ng` shorthand.
-
-```
-tns create my-app-name --ng
-```
-
-> Note: Both commands will create a new NativeScript app that uses the latest version of this template published to [npm] (https://www.npmjs.com/package/tns-template-hello-world-ng).
-
-If you want to create a new app that uses the source of the template from the `master` branch, you can execute the following:
+## How To Change Menu Items
+You can change the menu items of drawer from `app/modules/shared/side-drawer-page/side-drawer-page.component.ts` file as shown below:
 
 ```
-tns create my-app-name --template https://github.com/NativeScript/template-hello-world-ng.git#master
+navMenu: any[] = [
+    { name: 'Home', commands: ['/'] },
+    { name: 'About', commands: ['/about'] },
+    { name: 'Contact', commands: ['/contact'] }
+];
 ```
 
-**NB:** Please, have in mind that the master branch may refer to dependencies that are not on NPM yet!
+## How To Create New Page
+You just need to wrap the content template of the new page inside `<side-drawer-page>` tag as shown below:
+
+```
+<side-drawer-page>
+    <GridLayout>
+        <Label text="Hello World"></Label>
+    </GridLayout>
+</side-drawer-page>
+``` 
+You can refer home, contact or about sample modules for reference.
+

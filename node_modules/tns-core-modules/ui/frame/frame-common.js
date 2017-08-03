@@ -26,9 +26,6 @@ function onLivesync(args) {
     });
 }
 application.on("livesync", onLivesync);
-if (global && global.__inspector) {
-    require("tns-core-modules/debugger/devtools-elements");
-}
 var frameStack = [];
 function buildEntryFromArgs(arg) {
     var entry;

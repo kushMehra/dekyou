@@ -3,7 +3,6 @@ var types = require("../../utils/types");
 var utils = require("../../utils/utils");
 var getter = utils.ios.getter;
 var domainDebugger = require("../../debugger/debugger");
-var http_request_common_1 = require("./http-request-common");
 var HttpResponseEncoding;
 (function (HttpResponseEncoding) {
     HttpResponseEncoding[HttpResponseEncoding["UTF8"] = 0] = "UTF8";
@@ -128,8 +127,9 @@ function request(options) {
                             },
                             toFile: function (destinationFilePath) {
                                 var fs = require("file-system");
+                                var fileName = options.url;
                                 if (!destinationFilePath) {
-                                    destinationFilePath = http_request_common_1.getFilenameFromUrl(options.url);
+                                    destinationFilePath = fs.path.join(fs.knownFolders.documents().path, fileName.substring(fileName.lastIndexOf('/') + 1));
                                 }
                                 if (data instanceof NSData) {
                                     data.writeToFileAtomically(destinationFilePath, true);

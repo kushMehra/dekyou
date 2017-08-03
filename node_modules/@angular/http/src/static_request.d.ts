@@ -80,4 +80,4 @@ export declare class Request extends Body {
      */
     getBody(): any;
 }
-export declare const ArrayBuffer: ArrayBufferConstructor;
+export declare const ArrayBuffer: any;
