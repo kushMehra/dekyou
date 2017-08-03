@@ -1,0 +1,43 @@
+<ActionBar title="Scan">
+</ActionBar>
+
+<side-drawer-page>
+
+<ListView borderWidth="1" [items]="itemList" height="300" class="list-group" (itemTap)="onItemTap($event)" (loaded)="viewLoaded($event)">
+    <ng-template let-item="item" let-i="index" let-odd="odd" let-even="even">
+        <GridLayout class="{{i == isSelected ? 'list-group-item active' : 'list-group-item'}}" columns="80, *, auto" rows="auto, *">
+<!--            <Label col="0" [text]='"Item Code: " + item.code'></Label>-->
+            <Label col="0" colSpan="6" [text]='item.name + "(2) "'></Label>
+<!--            <Label col="2" [text]='"Item Description: " + item.description'></Label>-->
+            <Label col="2" [text]='"$"+item.price+"   "'></Label>
+        </GridLayout>
+    </ng-template>
+</ListView>
+    <StackLayout class="form" borderWidth="1" height="250">
+    <Label class="label text-left font-weight-bold" text="Item Code: {{firstItem?.code}}"></Label>
+    <Label class="label font-weight-bold" text="Item Name: {{firstItem?.name}}"></Label>
+    <Label class="label font-weight-bold" text="Item Price: {{firstItem?.price}}"></Label>
+</StackLayout>
+    <StackLayout height="100">
+        <Button text="Add to Cart" class="btn btn-primary btn btn-rounded-lg"
+                style="width: 40%" (tap)="onAddCart()"></Button>
+    </StackLayout>
+
+
+<!--    <StackLayout>
+       <Label *ngFor="let element of itemList" text="Item Code: {{element.code}}"
+        style="font-size: 10ex ;width:auto;height: 10%"></Label>
+
+        <Label *ngFor="let element of itemList" text="Item Name: {{element.name}}"
+        style="font-size: 10ex ;width: auto;height: 10%"></Label>
+
+        <Label *ngFor="let element of itemList" text="Item description: {{element.name}}"
+           style="font-size: 10ex ;width: auto;height: 10%;"></Label>
+
+        <Label *ngFor="let element of itemList" text="Item Price: {{element.price}}"
+           style="font-size: 10ex ;width: auto;height: 10%"></Label>&ndash;&gt;
+
+
+
+    </StackLayout>-->
+</side-drawer-page>

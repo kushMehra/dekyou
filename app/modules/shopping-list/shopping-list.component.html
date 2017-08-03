@@ -1,0 +1,42 @@
+<ActionBar title="Shopping List">
+</ActionBar>
+
+<side-drawer-page>
+    <ListView borderWidth="1" [items]="itemList" height="300" class="list-group" (itemTap)="onItemTap($event)" (loaded)="viewLoaded($event)">
+        <ng-template let-item="item" let-i="index" let-odd="odd" let-even="even">
+            <GridLayout class="{{i == selectedItemIndex ? 'list-group-item active' : 'list-group-item'}}" columns="80, *, auto" rows="auto, *">
+                <!--            <Label col="0" [text]='"Item Code: " + item.code'></Label>-->
+                <Label col="0" colSpan="6" [text]='item.name + "(" + item.description +") "'></Label>
+                <!--            <Label col="2" [text]='"Item Description: " + item.description'></Label>-->
+                <Label col="2" [text]='"$"+item.price+"   "'></Label>
+            </GridLayout>
+        </ng-template>
+    </ListView>
+    <StackLayout borderWidth="1" height="200">
+        <Label text="Item Code: {{selectedItem?.code}}"></Label>
+        <Label text="Item Name: {{selectedItem?.name}}"></Label>
+        <Label text="Item Price: {{selectedItem?.price}}"></Label>
+    </StackLayout>
+    <StackLayout height="100">
+        <GridLayout rows="auto, auto" columns="*,*">
+        <Button row="0" col="0" text="Remove from Cart" class="btn btn-primary btn-rounded-lg"
+                style="width: 40%" (tap)="onRemoveItem($event)"></Button>
+        <Button row="0" col="1" text="Checkout" class="btn btn-primary btn-rounded-lg"
+                style="width: 40%" (tap)="onCheckout($event)"></Button>
+        </GridLayout>
+    </StackLayout>
+</side-drawer-page>
+
+<!--<side-drawer-page>
+     <GridLayout class="contact-page p-30">
+          <Label
+              class="h1 page-text"
+              [text]="text"
+              textWrap="true">
+          </Label>
+      </GridLayout>
+    <StackLayout *ngFor="let element of itemList">
+        <Label [text]="element.barcodenumber"></Label>
+        <Label [text]="element.description"></Label>
+    </StackLayout>
+</side-drawer-page>-->

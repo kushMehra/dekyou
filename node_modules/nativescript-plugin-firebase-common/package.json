@@ -1,0 +1,109 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "nativescript-plugin-firebase-common@^0.10.11",
+        "scope": null,
+        "escapedName": "nativescript-plugin-firebase-common",
+        "name": "nativescript-plugin-firebase-common",
+        "rawSpec": "^0.10.11",
+        "spec": ">=0.10.11 <0.11.0",
+        "type": "range"
+      },
+      "/Users/kushagramehra/Technical_Development/AppDev/NativeScript/dekyou"
+    ]
+  ],
+  "_from": "nativescript-plugin-firebase-common@>=0.10.11 <0.11.0",
+  "_id": "nativescript-plugin-firebase-common@0.10.11",
+  "_inCache": true,
+  "_location": "/nativescript-plugin-firebase-common",
+  "_nodeVersion": "6.2.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/nativescript-plugin-firebase-common-0.10.11.tgz_1469986484056_0.9530167055781931"
+  },
+  "_npmUser": {
+    "name": "kallyn_gowdy",
+    "email": "kallyngowdy@gmail.com"
+  },
+  "_npmVersion": "3.8.9",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "nativescript-plugin-firebase-common@^0.10.11",
+    "scope": null,
+    "escapedName": "nativescript-plugin-firebase-common",
+    "name": "nativescript-plugin-firebase-common",
+    "rawSpec": "^0.10.11",
+    "spec": ">=0.10.11 <0.11.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/nativescript-plugin-firebase-common/-/nativescript-plugin-firebase-common-0.10.11.tgz",
+  "_shasum": "61295d6373398f5e1f81e0fa1a617985e63ee34d",
+  "_shrinkwrap": null,
+  "_spec": "nativescript-plugin-firebase-common@^0.10.11",
+  "_where": "/Users/kushagramehra/Technical_Development/AppDev/NativeScript/dekyou",
+  "author": {
+    "name": "Telerik / Eddy Verbruggen",
+    "email": "eddyverbruggen@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/KallynGowdy/nativescript-plugin-firebase/issues"
+  },
+  "contributors": [
+    {
+      "name": "Eddy Verbruggen",
+      "email": "eddyverbruggen@gmail.com"
+    },
+    {
+      "name": "Kallyn Gowdy",
+      "email": "kallyngowdy@gmail.com"
+    }
+  ],
+  "dependencies": {},
+  "description": "Fire. Base. Firebase!",
+  "devDependencies": {
+    "tns-core-modules": "~1.5.2",
+    "typescript": "^1.7.5"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "61295d6373398f5e1f81e0fa1a617985e63ee34d",
+    "tarball": "https://registry.npmjs.org/nativescript-plugin-firebase-common/-/nativescript-plugin-firebase-common-0.10.11.tgz"
+  },
+  "gitHead": "5dc0e3ce63d82af6d31ef8a877f612576d1dba84",
+  "homepage": "https://github.com/KallynGowdy/nativescript-plugin-firebase",
+  "keywords": [
+    "NativeScript",
+    "Firebase",
+    "Database"
+  ],
+  "license": "MIT",
+  "main": "firebase.js",
+  "maintainers": [
+    {
+      "name": "kallyn_gowdy",
+      "email": "kallyngowdy@gmail.com"
+    }
+  ],
+  "name": "nativescript-plugin-firebase-common",
+  "nativescript": {
+    "platforms": {
+      "android": "1.3.0",
+      "ios": "1.3.0"
+    }
+  },
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KallynGowdy/nativescript-plugin-firebase.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "npm run build"
+  },
+  "version": "0.10.11"
+}

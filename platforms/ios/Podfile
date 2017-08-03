@@ -1,0 +1,9 @@
+use_frameworks!
+
+target "dekyou" do
+# Begin Podfile - /Users/kushagramehra/Technical_Development/AppDev/NativeScript/dekyou/node_modules/nativescript-plugin-firebase-common/platforms/ios/Podfile 
+ pod 'Firebase', '~> 2.5.0'
+ 
+ # End Podfile 
+
+end

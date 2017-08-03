@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Firebase = require("nativescript-plugin-firebase-common").Firebase;
+console.log("in firebase.ts");
+exports.firebase = Firebase.createNew({
+    url: 'https://shopping-7bdc2.firebaseio.com/items'
+    // persist: false // turn off offline disk persistence
+});
+//console.log("firebase root " + firebase.child("items").key()); 
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmlyZWJhc2UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJmaXJlYmFzZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLElBQUksUUFBUSxHQUFHLE9BQU8sQ0FBQyxxQ0FBcUMsQ0FBQyxDQUFDLFFBQVEsQ0FBQztBQUV2RSxPQUFPLENBQUMsR0FBRyxDQUFDLGdCQUFnQixDQUFDLENBQUM7QUFFbkIsUUFBQSxRQUFRLEdBQUcsUUFBUSxDQUFDLFNBQVMsQ0FBQztJQUNyQyxHQUFHLEVBQUUsNkNBQTZDO0lBQ2xELHNEQUFzRDtDQUN6RCxDQUFDLENBQUM7QUFFSCxnRUFBZ0UiLCJzb3VyY2VzQ29udGVudCI6WyJ2YXIgRmlyZWJhc2UgPSByZXF1aXJlKFwibmF0aXZlc2NyaXB0LXBsdWdpbi1maXJlYmFzZS1jb21tb25cIikuRmlyZWJhc2U7XG5cbmNvbnNvbGUubG9nKFwiaW4gZmlyZWJhc2UudHNcIik7XG5cbmV4cG9ydCB2YXIgZmlyZWJhc2UgPSBGaXJlYmFzZS5jcmVhdGVOZXcoe1xuICAgIHVybDogJ2h0dHBzOi8vc2hvcHBpbmctN2JkYzIuZmlyZWJhc2Vpby5jb20vaXRlbXMnXG4gICAgLy8gcGVyc2lzdDogZmFsc2UgLy8gdHVybiBvZmYgb2ZmbGluZSBkaXNrIHBlcnNpc3RlbmNlXG59KTtcblxuLy9jb25zb2xlLmxvZyhcImZpcmViYXNlIHJvb3QgXCIgKyBmaXJlYmFzZS5jaGlsZChcIml0ZW1zXCIpLmtleSgpKTsiXX0=
